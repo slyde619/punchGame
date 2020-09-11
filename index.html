@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>VueJS Intro</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <!-- Vue Instance -->
+  <!-- <div id="intro-vue">
+    <h2>{{ hello('Good day') }}</h2>
+    <h3>{{person['city']}}</h3>
+    <P>Job: {{ person['job'] }}</P>
+    <p>Square of 13: {{square(13)}}</p>
+  </div> -->
+
+  <!-- Data Binding -->
+  <!-- <div id="data-binding">
+    <a v-bind:href="website">Google</a>
+    <input  type="text" :value="name">
+    <p v-html='linkTag'></p>
+    <h3 v-html='websiteTag'></h3>
+  </div>
+   -->
+
+  <!-- Mouse Events -->
+  <!-- <div id="vue-app">
+    <h2>Events</h2>
+    <button v-on:click="add(1)">Add a Year</button>
+    <button v-on:click.once="subtract(1)">Subtract a Year</button>
+    <button v-on:dblclick="add(5)">Add 5 Years</button>
+    <button v-on:dblclick='subtract(5)'>Subtract 5 Years</button>
+    <p>My age is {{ age }}</p>
+    <div id="canvas" @mousemove="updateXY">
+      <h4>offsetX: {{x}}, offsetY: {{y}}</h4>
+    </div> <br>
+    <a @click.prevent="preventMe" href="https://www.google.com">Google</a>
+  </div> -->
+
+  <!-- Keyboard Events -->
+  <!-- <div id="vue-app">
+    <h1>keyboard events</h1>
+    <label for="">Name:</label>
+    <input type="text" @keyup.enter='logName'>
+    <label for="">Age:</label>
+    <input type="text" @keyup.alt.enter='logAge'>
+  </div> -->
+
+  <!-- 2 way Data-Binding -->
+  <!-- <div id="vue-app">
+    <h1>keyboard events</h1>
+    <label for="">Name:</label>
+    <input type="text" v-model='name' >
+    <span>{{name}}</span> <br> <br>
+    <label for="">Age:</label>
+    <input type="text" v-model='age'/>
+    <span>{{age}}</span> <br><br>
+    <label for="">Country:</label>
+    <input type="text" v-model='country'>
+    <span>{{ country}}</span>
+  </div> -->
+
+  <!-- Computed Props -->
+  <!-- <div id="vue-app">
+    <h1>Computed Properties</h1>
+    <button @click='a++'>Add to A</button>
+    <button @click="b++">Add to B</button>
+    <p>A - {{ a }} </p>
+    <p>A - {{ b }} </p>
+    <p>Age + A = {{ addToA }}</p>
+    <p>Age + B = {{ addToB }}</p>
+  </div> -->
+
+  <!-- Dynamic CSS -->
+  <!-- <div id="vue-app">
+    <h1>Dynamic CSS</h1>
+    <h2>Example 1</h2>
+    <div @click="available = !available" :class="{available: available}">
+      <span>Vue</span>
+    </div>
+    <h2>Example 2</h2>
+    <button @click="nearby = !nearby">Toggle Nearby</button>
+    <button @click="available = !available">Toggle Available</button>
+    <div :class="getClass">
+      <span>Let'App</span>
+    </div>
+  </div> -->
+
+  <!-- Conditionals -->
+  <!-- <div id="vue-app">
+    <h1>Conditionals</h1>
+    <button @click="error = !error">Toggle error</button>
+    <button @click="success = !success">Toggle success</button>
+    <p v-if="error">This was the error</p>
+    <p v-else-if="success">Success sure for you...</p>
+    <p v-show="error">Error ):</p>
+    <p v-show="success">Whoooohoo, success :)</p>
+  </div> -->
+
+  <!-- Looping with for v-for -->
+  <!-- <div id="vue-app">
+    <h1>Looping through List</h1>
+    <ul>
+      <li v-for="(food,index) in foods">
+        {{index}}. {{ food }}
+      </li>
+    </ul>
+    <ul>
+      <li v-for="(snack, index) in snacks">
+        {{index}}. {{ snack.name }} - {{ snack.qty}}
+      </li>
+    </ul>
+    <template v-for="food in foods">
+      <h3>{{ food}}</h3>
+    </template>
+    <template  v-for="snack in snacks">
+      <h4>{{snack.name}}</h4>
+      <h6>{{snack.qty}}</h6>
+    </template>
+    <template v-for="snack in snacks">
+      <div v-for="(value, key) in snack">
+        <h4>{{ key}} : {{ value}}</h4>
+      </div>
+    </template>
+  </div> -->
+
+  <div id="vue-app">
+    <!-- Bag Health -->
+    <div id="bag-health">
+      <div :style="{width: health + '%'}"></div>
+    </div>
+
+    <!-- Bag Images -->
+    <div id="bag" :class="{burst: hasEnded}"></div>
+
+    
+    <!-- Game Controls -->
+    <div id="controls">
+      <button @click="punch" v-show="!hasEnded">Punch</button>
+      <button @click="restart">Restart</button>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
