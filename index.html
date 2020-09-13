@@ -128,21 +128,28 @@
   </div> -->
 
   <div id="vue-app">
-    <!-- Bag Health -->
-    <div id="bag-health">
-      <div :style="{width: health + '%'}"></div>
+    <div class="container">
+      <!-- Bag Health -->
+      <div id="bag-health">
+        <div :style="{width: health + '%'}"></div>
+      </div>
+  
+      <!-- Bag Images -->
+      <div id="bag" :class="{bursted: hasEnded}">
+      </div>
+  
+       <!-- Game message -->
+       <div id="game-msg" v-show="hasEnded">
+        <p> {{ showMsg }} </p>
+      </div>
+      
+      <!-- Game Controls -->
+      <div id="controls">
+        <button @click="punch" v-show="!hasEnded">Punch</button>
+        <button @click="restart" v-bind:class="{reStart: hasEnded }">Restart</button>
+      </div>
     </div>
-
-    <!-- Bag Images -->
-    <div id="bag" :class="{burst: hasEnded}"></div>
-
     
-    <!-- Game Controls -->
-    <div id="controls">
-      <button @click="punch" v-show="!hasEnded">Punch</button>
-      <button @click="restart">Restart</button>
-    </div>
-
   </div>
   <script src="app.js"></script>
 </body>
