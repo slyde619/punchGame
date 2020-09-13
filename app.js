@@ -154,7 +154,8 @@ new Vue({
   el: '#vue-app',
   data: {
     health: 100,
-    hasEnded: false
+    hasEnded: false,
+    showMsg: `Bursted!!!`
   },
   methods:  {
     punch: function(){
