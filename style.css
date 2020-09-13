@@ -27,43 +27,67 @@ span{
   margin-left: .33rem;
 } */
 
-
-#bag{
-  width: 12.5rem;
-  height: 31.35rem;
-  background: url('img/bag.png') center no-repeat;
-  margin: 0 auto;
-  background-size: 70%;
+.container{
+  width: 85%;
+  max-width: 65em;
+  margin: 2rem auto;
 }
 
-#bag.burst{
-  background: url('img/bag-burst.png') center no-repeat;
-  background-size: 70%;
+#bag{
+  width: 7.5rem;
+  height: 7rem;
+  background: url('/img/bag.png') center no-repeat;
+  background-size: 80%;
+  margin: 1rem auto;
+  padding: 6rem 0;
+}
+
+#bag.bursted{
+  background: url('/img/bag-burst.png') center no-repeat;
+  background-size: 80%;
 }
 
 #bag-health{
-  width: 12rem;
-  border: 1px solid #030f00;
-  margin: 3rem auto 0 auto;
-  border-radius: .44rem;
+  width: 9.3rem;
+  border: 2px solid #050505;
+  border-radius: .37rem;
+  margin: 0 auto
 }
 
 #bag-health div{
-  height: 1.25rem;
-  background: #ca0637;
-  border-radius: .35rem;
+  background-color: #ca0636;
+  height: 1.55rem;
+  border-radius: .24rem;
 }
 
 #controls{
   margin: 0 auto;
-  width: 9rem;
+  width: 8rem;
 }
 
-button{
+#controls button{
+  font-size: .94rem;  
   border-style: none;
-  padding: .44rem;
-  margin: 0 .23rem;
-  font-size: 1rem;
-  border-radius: .5rem;
+  outline: none;
+  padding: .40rem;
+  font-weight: 800;
+}
 
+.reStart{
+  width: 100%;
+  border-radius: .5rem;
+  background-color: #db1445f8;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 2.9rem;
+}
+
+#game-msg p{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-family: cursive;
+  font-size: 1.9rem;
 }
